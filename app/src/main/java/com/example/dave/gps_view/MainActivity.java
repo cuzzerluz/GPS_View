@@ -18,7 +18,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE="mystring";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -51,12 +49,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
     public void sendGPS(View view){
         Intent intent = new Intent(this, sendGPS.class);
         startActivity(intent);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

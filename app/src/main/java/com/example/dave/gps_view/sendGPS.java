@@ -26,6 +26,8 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import static android.service.autofill.Validators.and;
+
 public class sendGPS extends AppCompatActivity {
     LocationManager locationManager;
     double longitudeGPS, latitudeGPS;
@@ -79,8 +81,6 @@ public class sendGPS extends AppCompatActivity {
               {
                   locationManager.requestLocationUpdates(
                           LocationManager.GPS_PROVIDER, 2 * 60 * 1000, 10, locationListenerGPS);
-
-
               }
         }
     }
@@ -105,6 +105,7 @@ public class sendGPS extends AppCompatActivity {
 
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(address));
             startActivity(browserIntent);
+            finish();
         }
 
         @Override
@@ -139,6 +140,7 @@ public class sendGPS extends AppCompatActivity {
             }
         }
     };
+
 
 }
 

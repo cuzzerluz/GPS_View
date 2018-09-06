@@ -7,4 +7,5 @@
     <string name="title_activity_send_gps">sendGPS</string>
     <string name="GPS">Send GPS</string>
     <string name="debug">Debugged</string>
+    <string name="title_activity_geo_fence">GeoFence</string>
 </resources>
